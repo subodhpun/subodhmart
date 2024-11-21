@@ -4,10 +4,31 @@ import client from '../../assets/images/client.jpg';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import {useState, useEffect} from 'react';
+import axios from 'axios';
 
 
 const Home = () => {
   const navigate = useNavigate();
+  const [products, setProducts]=useState([]);
+  const [visibleCount, setVisibleCount] = useState(12); // Number of products to display initially
+
+
+    useEffect(() => {
+      axios.get('https://fakestoreapi.com/products')
+      .then(response =>{
+        console.log(response.data);
+        setProducts(response.data)
+      })
+      .catch(error => {
+        console.error('Error in data fetching:', error);
+      });
+    }, []);
+
+    const handleShowMore = () => {
+      setVisibleCount((prevCount) => prevCount + 4); // Load 12 more products on each click
+    };
+
 
   const Testimonials=[
     {
@@ -81,7 +102,32 @@ const Home = () => {
           <h1 className='text-[3.5rem]'>Our</h1>
           <h1 className='text-[3.5rem] text-customRed'>Products</h1>
         </div>
+        
+        <div className='grid grid-cols-4 gap-6'>
+        {products.slice(0, visibleCount).map((product, index) => (
+            <div key={index} className="p-4 bg-white rounded-lg shadow-md">
+              <img
+                src={product.image}
+                alt={product.title}
+                className="w-full h-auto"
+              />
+              <h3 className="text-center mt-2 font-semibold">{product.title}</h3>
+              <p className="text-center text-gray-700">${product.price}</p>
+            </div>
+          ))}
+        </div>
       </div>
+
+      {visibleCount < products.length && (
+        <div className="flex justify-center mt-8">
+          <button
+            onClick={handleShowMore}
+            className="px-6 py-3 bg-customBlue text-white font-bold rounded-lg hover:bg-customRed text-lg"
+          >
+            Show More
+          </button>
+        </div>
+      )}
 
 
 
