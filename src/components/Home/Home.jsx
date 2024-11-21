@@ -11,7 +11,7 @@ import axios from 'axios';
 const Home = () => {
   const navigate = useNavigate();
   const [products, setProducts]=useState([]);
-  const [visibleCount, setVisibleCount] = useState(12); // Number of products to display initially
+  const [visibleCount, setVisibleCount] = useState(8); // Number of products to display initially
 
 
     useEffect(() => {
@@ -97,23 +97,23 @@ const Home = () => {
       </div>
 
       {/* Our Products */}
-      <div className="bg-gray-400">
+      <div className="">
         <div className='flex flex-row font-custonFont space-x-1 justify-center'>
           <h1 className='text-[3.5rem]'>Our</h1>
           <h1 className='text-[3.5rem] text-customRed'>Products</h1>
         </div>
         
-        <div className='grid grid-cols-4 gap-6'>
+        <div className='grid grid-cols-4 gap-20'>
         {products.slice(0, visibleCount).map((product, index) => (
-            <div key={index} className="p-4 bg-white rounded-lg shadow-md">
+            <div key={index} className="relative p-5 bg-white rounded-lg shadow-md hover:shadow-xl size-[15rem]">
               <img
                 src={product.image}
                 alt={product.title}
-                className="w-full h-auto"
+                className=""
               />
               <h3 className="text-center mt-2 font-semibold">{product.title}</h3>
               <p className="text-center text-gray-700">${product.price}</p>
-            </div>
+              </div>
           ))}
         </div>
       </div>
@@ -141,7 +141,7 @@ const Home = () => {
         {/* Testimonial Slider */}
         <Slider {...settings} className="w-full shadow-lg border-2">
           {Testimonials.map((testimonial, index) => (
-            <div key={index} className='p-6 m-4 rounded-lg w-auto flex flex-col items-center justify-center'>
+            <div key={index} className='p-6 m-4 rounded-lg w-auto h-auto flex flex-col items-center justify-center'>
               <img src={testimonial.photo} alt='no img' className='rounded-full size-auto mx-auto mb-3' />
               <p className='text-lg font-medium text-center'>{testimonial.feedback}</p>
               <p className='text-sm text-gray-700 text-center'>{testimonial.designation}</p>
