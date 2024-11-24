@@ -97,7 +97,7 @@ const Home = () => {
     <div className='relative'>
       {/* Hero Section */}
       <div className='w-full relative z-0'>
-        <img src="src\assets\images\slider-bg.jpg" alt="Background" className='w-full object-cover'/>
+        <img src="src\assets\images\slider-bg.jpg" alt="Background" className='w-full object-cover '/>
         <div className='absolute z-10 justify-center items-start top-1/4 l-0 md:ml-36 flex flex-col px-8 transform animate-slide'>
           <h2 className='text-2xl sm:text-4xl lg:text-5xl font-bold font-custonFont text-customRed'>Welcome to</h2>
           <h1 className='text-3xl md:text-5xl lg:text-8xl font-extrabold font-custonFont text-customBlue'>Subodh Mart</h1>
@@ -151,29 +151,12 @@ const Home = () => {
         </div>
       )}
 
-      {/* Shop by catagories container */}
-      <div className=' bg-blue-50'>
-        <div className='m-10 p-5'>
-          <h1 className='font-bold text-4xl '>Shop by Catagories</h1>
-        </div>
-        {/* electronics */}
-        <div className=''>
-         {jewelerys.map((jewelery, index)=>(
-          <div key={index}>
-            <img src={jewelery.iamge}/>
-          </div>
-         ))}
-
-        </div>
-      </div>
-
-
 
       {/* Testimonial Section */}
-      <h1 className='flex justify-center mt-8 font-custonFont text-4xl underline underline-offset-1'>Client's Testimonials</h1>
-      <div className='relative flex mt-14 justify-center overflow-x-hidden'>
+      <h1 className='flex justify-center mt-20 mb-20 font-custonFont text-4xl underline underline-offset-1'>Client's Testimonials</h1>
+      <div className='relative overflow-hidden pb-5 justify-center items-center ml-0 mb-2'>
         {/* Testimonial Slider */}
-        <Slider {...settings} className="w-full shadow-lg border-2">
+        <Slider {...settings} className="w-dvw mt-1 shadow-lg">
           {Testimonials.map((testimonial, index) => (
             <div key={index} className='p-6 m-4 rounded-lg w-auto h-auto flex flex-col items-center justify-center'>
               <img src={testimonial.photo} alt='no img' className='rounded-full size-auto mx-auto mb-3' />
@@ -183,6 +166,37 @@ const Home = () => {
           ))}
         </Slider>
       </div>
+
+      {/* end container */}
+      <div className='bg-[rgb(248,248,248)] mt-1 mb-10'>
+      <div className='space-y-10 ml-5 md:grid md:grid-cols-3 md:p-10 md:ml-44'>
+        <div className='flex flex-col space-y-4 md:space-y-6'>
+          <img src='src\assets\images\logo.png' alt='no img' className='h-12 w-3/4 md:w-1/2 md:h-5 ml-0 p-0 md:ml-2' />
+          <div className='space-y-3 md:space-y-4'>
+            <h3><span className='font-[700]'>Address:</span>Chyasal, Lalitpur</h3>
+            <h3><span className='font-[700]'>Phone:</span>9888568997</h3>
+            <h3><span className='font-[700]'>Email:</span>subodhmart@gmail.com</h3>
+          </div>
+        </div>
+        <div className='mt-20'>
+          <ul className='space-y-3 md:space-y-4'>
+            <li>Home</li>
+            <li>Products</li>
+            <li>Shop</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div className='mt-20'>
+          <ul className='space-y-3 md:space-y-4'>
+            <li>Register</li>
+            <li>Login</li>
+            <li>Logout</li>
+            <li>Cart</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+
 
     </div>
   );
