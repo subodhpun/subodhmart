@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import client from '../../assets/images/client.jpg';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
@@ -171,32 +171,38 @@ const Home = () => {
       <div className='bg-[rgb(248,248,248)] mt-1 mb-10'>
       <div className='space-y-10 ml-5 md:grid md:grid-cols-3 md:p-10 md:ml-44'>
         <div className='flex flex-col space-y-4 md:space-y-6'>
-          <img src='src\assets\images\logo.png' alt='no img' className='h-12 w-3/4 md:w-1/2 md:h-5 ml-0 p-0 md:ml-2' />
+          <img src='src\assets\images\logo.png' alt='no img' className='h-12 w-3/4 md:w-1/2 md:h-15 ml-0 p-0 md:ml-2' />
           <div className='space-y-3 md:space-y-4'>
-            <h3><span className='font-[700]'>Address:</span>Chyasal, Lalitpur</h3>
-            <h3><span className='font-[700]'>Phone:</span>9888568997</h3>
-            <h3><span className='font-[700]'>Email:</span>subodhmart@gmail.com</h3>
+            <h3><span className='font-[700]'>Address:</span>&nbsp;Chyasal, Lalitpur</h3>
+            <h3><span className='font-[700]'>Phone:</span>&nbsp;9888568997</h3>
+            <h3><span className='font-[700]'>Email:</span>&nbsp;subodhmart@gmail.com</h3>
           </div>
         </div>
         <div className='mt-20'>
           <ul className='space-y-3 md:space-y-4'>
-            <li>Home</li>
-            <li>Products</li>
-            <li>Shop</li>
-            <li>Contact</li>
+            <li><NavLink>Home</NavLink></li>
+            <li><NavLink>Products</NavLink></li>
+            <li><NavLink>Shop</NavLink></li>
+            <li><NavLink>Contact</NavLink></li>
           </ul>
         </div>
         <div className='mt-20'>
           <ul className='space-y-3 md:space-y-4'>
-            <li>Register</li>
-            <li>Login</li>
-            <li>Logout</li>
-            <li>Cart</li>
+            <li><NavLink>Register</NavLink></li>
+            <li><NavLink>Login</NavLink></li>
+            <li><NavLink>Logout</NavLink></li>
+            <li><NavLink>Cart</NavLink></li>
           </ul>
         </div>
       </div>
       </div>
 
+      {/* footer */}
+      
+      <footer className='flex flex-col justify-center items-center bg-[rgb(34,34,34)] p-5'>
+      <p className='text-white'>&copy; 2024 <span className='text-customRed'><NavLink>Subodh Mart.</NavLink> </span>All rights reserved.</p>
+      <p className='text-white'>Made with ❤️ by: <NavLink><span className='text-customRed'>Subodh Kiran Pun Magar</span></NavLink></p>
+      </footer>
 
     </div>
   );
