@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {useState, useEffect} from 'react';
 import axios from 'axios';
+import Footer from '../Footer/Footer';
 
 
 const Home = () => {
@@ -199,10 +200,7 @@ const Home = () => {
 
       {/* footer */}
       
-      <footer className='flex flex-col justify-center items-center bg-[rgb(34,34,34)] p-5'>
-      <p className='text-white'>&copy; 2024 <span className='text-customRed'><NavLink>Subodh Mart.</NavLink> </span>All rights reserved.</p>
-      <p className='text-white'>Made with ❤️ by: <NavLink><span className='text-customRed'>Subodh Kiran Pun Magar</span></NavLink></p>
-      </footer>
+     <Footer/>
 
     </div>
   );
