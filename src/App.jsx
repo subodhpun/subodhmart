@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, NavLink} from "react-router-dom";
 import Navbar from '../src/components/Navbar/Navbar'
 import Home from '../src/components/Home/Home'
 import Pages from '../src/components/Pages/Pages'
-import Products from '../src/components/Products/products'
+import Products from '../src/components/Products/Products'
 import Contact from '../src/components/Contact/Contact'
 import Login from '../src/components/Login/Login'
 import Cart from '../src/components/Cart/Cart'
