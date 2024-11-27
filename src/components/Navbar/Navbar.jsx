@@ -15,7 +15,7 @@ const Navbar = () => {
         {/* Logo */}
         <div>
           <img
-            src="public\assets\images\logo.png"
+            src="/assets/images/logo.png"
             alt="no img"
             className="h-10 md:h-14 ml-0 p-0 md:ml-2"
           />

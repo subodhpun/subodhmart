@@ -98,7 +98,7 @@ const Home = () => {
     <div className='relative'>
       {/* Hero Section */}
       <div className='w-full relative z-0'>
-        <img src="public\assets\images\slider-bg.jpg" alt="Background" className='w-full object-cover '/>
+        <img src="/assets/images/slider-bg.jpg" alt="Background" className='w-full object-cover '/>
         <div className='absolute z-10 justify-center items-start top-1/4 l-0 md:ml-36 flex flex-col px-8 transform animate-slide'>
           <h2 className='text-2xl sm:text-4xl lg:text-5xl font-bold font-custonFont text-customRed'>Welcome to</h2>
           <h1 className='text-3xl md:text-5xl lg:text-8xl font-extrabold font-custonFont text-customBlue'>Subodh Mart</h1>
