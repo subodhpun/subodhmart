@@ -2,8 +2,8 @@ import React from 'react'
 
 const Pages = () => {
   return (
-    <div>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, commodi.
+    <div className='flex justify-center p-72'>
+      <h1 className='font-custonFont text-customRed text-5xl font-extrabold'>Work in Progress</h1>
     </div>
   )
 }
