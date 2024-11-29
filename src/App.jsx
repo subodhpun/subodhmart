@@ -7,6 +7,7 @@ import Products from '../src/components/Products/Products'
 import Contact from '../src/components/Contact/Contact'
 import Login from '../src/components/Login/Login'
 import Cart from '../src/components/Cart/Cart'
+import CategoryDetails from '../src/components/Catagory/CatagoryDetails'; // Create this component
 const App = () => {
   return (
     <BrowserRouter>
@@ -18,6 +19,7 @@ const App = () => {
       <Route path="/Contact" element={<Contact />}/>
       <Route path="/Login" element={<Login />}/>
       <Route path="/Cart" element={<Cart />}/>
+      <Route path="/:category" element={<CategoryDetails />} /> {/* Dynamic route */}
     </Routes>
     </BrowserRouter>
   )
