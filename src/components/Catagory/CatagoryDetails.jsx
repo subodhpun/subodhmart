@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import Footer from '../Footer/Footer';
 
-const CategoryDetails = () => {
+const CategoryDetails = ({slider}) => {
   const { category } = useParams(); // Access the dynamic 'category' parameter
   const [products, setProducts] = useState([]);
 
@@ -19,6 +20,10 @@ const CategoryDetails = () => {
   }, [category]);
 
   return (
+    <>
+    <div>
+      {slider}
+    </div>
     <div>
       <h1>Products in {category}</h1>
       <div className="grid grid-cols-4 gap-4">
@@ -32,6 +37,9 @@ const CategoryDetails = () => {
         ))}
       </div>
     </div>
+
+    <Footer/>
+    </>
   );
 };
 

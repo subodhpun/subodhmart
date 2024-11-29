@@ -11,7 +11,7 @@ import mens from '../../../public/assets/images/mens.jpg'
 import female from '../../../public/assets/images/female.jpg'
 import sale1 from '../../../public/assets/images/sale1.jpg'
 import sale2 from '../../../public/assets/images/sale2.jpg'
-
+import Footer from '../Footer/Footer';
 
 const Products = () => {
   const [productCat, setProductCat]= useState([]);
@@ -58,9 +58,7 @@ const Products = () => {
         ],
   };
 
-  return (
-    <>
-    {/* sale banner */}
+  const slider=(
     <div className='relative size-full shadow-md shadow-red-300 backdrop-blur-2xl'>
     <Slider {...settings} className='flex overflow-x-hidden'>
       <div className=''>
@@ -71,19 +69,28 @@ const Products = () => {
       </div>
       </Slider>
     </div>
+  );
+
+  return (
+    <>
+    {/* passing the props */}
+    {/* sale banner */}
+    <div>
+    {slider}
+    </div>
 
     {/* products by category */}
-    <div className='flex flex-col justify-center'>
-      <h1 className='flex justify-center p-4 m-10 text-4xl font-custonFont underline'>Products By &nbsp;<span className='text-customRed underline decoration-customRed'>Catagory</span></h1>
+    <div className='flex flex-col justify-center m-20'>
+      <h1 className='flex justify-center p-4 m-10 text-4xl font-custonFont underline'>Products By &nbsp;<span className='text-customRed underline decoration-customRed'>Category</span></h1>
       <div className='flex flex-row justify-around shadow-lg'>
       {productCat.map((category, index) => (
         <div key={index} className='flex flex-col items-center m-6 size-80'>
          
           <div className='flex flex-row border-2 size-full transition-all duration-500 ease-in-out hover:scale-105'>
-          <img src={category=== 'electronics'? electronics: null} className='object-cover' />
-          <img src={category=== 'jewelery'? jewelery: null} className='object-cover' />
-          <img src={category=== "men's clothing"? mens: null} className='object-cover' />
-          <img src={category=== "women's clothing"? female: null} className='object-cover' />
+           <NavLink to ={`/${category}`} className='flex'><img src={category=== 'electronics'? electronics: null} className='object-cover' /></NavLink>
+          <NavLink to ={`/${category}`} className='flex'><img src={category=== 'jewelery'? jewelery: null} className='object-cover' /></NavLink>
+          <NavLink to ={`/${category}`} className='flex'><img src={category=== "men's clothing"? mens: null} className='object-cover' /></NavLink>
+          <NavLink to ={`/${category}`} className='flex'><img src={category=== "women's clothing"? female: null} className='object-cover' /></NavLink>
           </div>
         
         <div className='flex flex-row justify-center font-serif font-bold text-2xl w-full transition-all duration-300 ease-in-out hover:text-white hover:bg-customRed'>
@@ -97,13 +104,7 @@ const Products = () => {
       </div>
     </div>
 
-    {/* <div>
-      {jewelerys.map((jewelery, index)=>(
-        <div key={index}>
-          <img src={jewelery.image} alt={jewelery.title}/>
-          </div>
-      ))}
-    </div> */}
+    <Footer/>
     </>
   )
 }
