@@ -14,11 +14,11 @@ const Navbar = () => {
       <div className="flex flex-col items-center sm:flex-row relative">
         {/* Logo */}
         <div>
-          <img
+          <NavLink to='/'><img
             src="/assets/images/logo.png"
             alt="no img"
             className="h-10 md:h-14 ml-0 p-0 md:ml-2"
-          />
+          /></NavLink>
         </div>
 
         {/* Hamburger */}

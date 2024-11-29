@@ -38,7 +38,7 @@ const Footer = () => {
 
         {/* footer div */}
         <footer className='flex flex-col justify-center items-center bg-[rgb(34,34,34)] p-5'>
-      <p className='text-white'>&copy;{new Date().getFullYear()} <span className='text-customRed'><NavLink>Subodh Mart.</NavLink> </span>All rights reserved.</p>
+      <p className='text-white'>&copy;{new Date().getFullYear()} <span className='text-customRed'><NavLink to='/'>Subodh Mart</NavLink> </span>All rights reserved.</p>
       <p className='text-white'>Made with ❤️ by: <NavLink><span className='text-customRed'>Subodh Kiran Pun Magar</span></NavLink></p>
       </footer>
     </div>
