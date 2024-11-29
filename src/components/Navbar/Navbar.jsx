@@ -46,22 +46,22 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink
-                  to="/pages"
-                  className={({ isActive }) =>
-                    `${isActive ? "text-customRed" : "text-black"} font-extrabold`
-                  }                   onClick={handleNavClick}
-                >
-                  Pages
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
                   to="/products"
                   className={({ isActive }) =>
                     `${isActive ? "text-customRed" : "text-black"} font-extrabold`
                   }                   onClick={handleNavClick}
                 >
                   Products
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/about"
+                  className={({ isActive }) =>
+                    `${isActive ? "text-customRed" : "text-black"} font-extrabold`
+                  }                   onClick={handleNavClick}
+                >
+                  About
                 </NavLink>
               </li>
               <li>

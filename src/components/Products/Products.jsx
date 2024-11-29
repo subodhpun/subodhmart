@@ -80,13 +80,13 @@ const Products = () => {
     </div>
 
     {/* products by category */}
-    <div className='flex flex-col justify-center m-20'>
-      <h1 className='flex justify-center p-4 m-10 text-4xl font-custonFont underline'>Products By &nbsp;<span className='text-customRed underline decoration-customRed'>Category</span></h1>
-      <div className='flex flex-row justify-around shadow-lg'>
+    <div className='box-border flex flex-col justify-center w-full'>
+      <h1 className='flex justify-center p-4 mt-10 md:m-10 text-3xl md:text-4xl  font-custonFont underline'>Products By &nbsp;<span className='text-customRed underline decoration-customRed'>Category</span></h1>
+      <div className='flex flex-col md:flex-row justify-around shadow-lg m-10'>
       {productCat.map((category, index) => (
-        <div key={index} className='flex flex-col items-center m-6 size-80'>
+        <div key={index} className='flex flex-col items-center m-5 size-80'>
          
-          <div className='flex flex-row border-2 size-full transition-all duration-500 ease-in-out hover:scale-105'>
+          <div className='flex flex-row size-full transition-all duration-500 ease-in-out hover:scale-105'>
            <NavLink to ={`/${category}`} className='flex'><img src={category=== 'electronics'? electronics: null} className='object-cover' /></NavLink>
           <NavLink to ={`/${category}`} className='flex'><img src={category=== 'jewelery'? jewelery: null} className='object-cover' /></NavLink>
           <NavLink to ={`/${category}`} className='flex'><img src={category=== "men's clothing"? mens: null} className='object-cover' /></NavLink>
