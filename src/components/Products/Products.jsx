@@ -11,6 +11,7 @@ import mens from '../../../public/assets/images/mens.jpg'
 import female from '../../../public/assets/images/female.jpg'
 import sale1 from '../../../public/assets/images/sale1.jpg'
 import sale2 from '../../../public/assets/images/sale2.jpg'
+import sale3 from '../../../public/assets/images/sale3.jpg'
 import Footer from '../Footer/Footer';
 
 const Products = () => {
@@ -66,6 +67,9 @@ const Products = () => {
       </div>
       <div className=''>
         <img src={sale2} alt='no img available' className='w-full h-96 transition-all duration-150 hover:scale-105'/>
+      </div>
+      <div className=''>
+        <img src={sale3} alt='no img available' className='w-full h-96 transition-all duration-150 hover:scale-105'/>
       </div>
       </Slider>
     </div>
