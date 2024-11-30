@@ -1,12 +1,19 @@
 import { React, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Hamburger from "hamburger-react";
+import { SlArrowDown } from "react-icons/sl";
+import { SlArrowUp } from "react-icons/sl";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isProductDropDownOpen, setIsProductDropDownOpen]= useState(false);
 
   const handleNavClick = () => {
     setIsMenuOpen(false);
+  };
+
+  const toggleProductDropDown=()=>{
+    setIsProductDropDownOpen(!isProductDropDownOpen);
   };
 
   return (
@@ -113,7 +120,7 @@ const Navbar = () => {
               Home
             </NavLink>
           </li>
-          <li>
+          <li className="flex flex-row items-center gap-2">
             <NavLink
               to="/products"
               className={({ isActive }) =>
@@ -122,6 +129,27 @@ const Navbar = () => {
             >
               Products
             </NavLink>
+            {/* toggle */}
+            <div
+            onClick={toggleProductDropDown}
+            className="relative cursor-pointer"
+            >
+            {isProductDropDownOpen? <i className={`fas fa-angle-double-up ${isProductDropDownOpen ? "text-customRed" : "text-black"}`}></i>: <i class='fas fa-angle-double-down'></i>}
+
+            {/* dropdown menu */}
+              {isProductDropDownOpen &&(
+                <div className="absolute top-7 left-0 p-3  z-20 w-56 bg-white">
+                <ul className="flex flex-col justify-center bg-blue-50 bg-opacity-20 backdrop-blur-sm font-custonFont text-lg">
+                  <NavLink to="/electronics" className={({isActive})=> `${isActive? "text-customRed": "text-black"}`}><li>Electronics</li></NavLink>
+                  <NavLink to="/jewelery" className={({isActive})=> `${isActive? "text-customRed": "text-black"}`}><li>Jewelery</li></NavLink>
+                  <NavLink to="/men's clothing" className={({isActive})=> `${isActive? "text-customRed": "text-black"}`}><li>Men's Clothing</li></NavLink>
+                  <NavLink to="/women's clothing" className={({isActive})=> `${isActive? "text-customRed": "text-black"}`}><li>Women's clothing</li></NavLink>
+                </ul>
+              </div>
+              )}
+            </div>
+
+            
           </li>
           <li>
             <NavLink
