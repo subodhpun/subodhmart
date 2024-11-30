@@ -20,12 +20,13 @@ const Navbar = () => {
     <div className="bg-white shadow-lg flex flex-row w-full p-3 mt-1 justify-around items-center h-auto md:space-x-2">
       <div className="flex flex-col items-center sm:flex-row relative">
         {/* Logo */}
-        <div>
+        <div className="relative flex flex-row items-center gap-6"> 
           <NavLink to='/'><img
-            src="/assets/images/logo.png"
+            src="/assets/images/logo1.png"
             alt="no img"
-            className="h-10 md:h-14 ml-0 p-0 md:ml-2"
+            className="w-full h-20 md:h-14 ml-0 p-0 md:ml-2"
           /></NavLink>
+          <NavLink to='/'><h1 className="font-custonFont font-bold text-4xl">Subodh Mart</h1></NavLink>
         </div>
 
         {/* Hamburger */}

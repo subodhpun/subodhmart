@@ -103,7 +103,7 @@ const Home = () => {
           <h2 className='text-2xl sm:text-4xl lg:text-5xl font-bold font-custonFont text-customRed'>Welcome to</h2>
           <h1 className='text-3xl md:text-5xl lg:text-8xl font-extrabold font-custonFont text-customBlue'>Subodh Mart</h1>
           <button className="mt-8 px-6 py-3 bg-customRed text-white font-bold rounded-lg hover:bg-customBlue text-center text-lg sm:text-base sm:px-4 sm:py-2 md:text-xl md:px-6 md:py-3">
-            Shop Now
+            <NavLink to='/Products'>Shop Now</NavLink>
           </button>
         </div>
       </div>
@@ -167,37 +167,6 @@ const Home = () => {
           ))}
         </Slider>
       </div>
-
-      {/* end container */}
-      <div className='bg-[rgb(248,248,248)] mt-1 mb-10'>
-      <div className='space-y-10 ml-5 md:grid md:grid-cols-3 md:p-10 md:ml-44'>
-        <div className='flex flex-col space-y-4 md:space-y-6'>
-          <img src='src\assets\images\logo.png' alt='no img' className='h-12 w-3/4 md:w-1/2 md:h-15 ml-0 p-0 md:ml-2' />
-          <div className='space-y-3 md:space-y-4'>
-            <h3><span className='font-[700]'>Address:</span>&nbsp;Chyasal, Lalitpur</h3>
-            <h3><span className='font-[700]'>Phone:</span>&nbsp;9888568997</h3>
-            <h3><span className='font-[700]'>Email:</span>&nbsp;subodhmart@gmail.com</h3>
-          </div>
-        </div>
-        <div className='mt-20'>
-          <ul className='space-y-3 md:space-y-4'>
-            <li><NavLink>Home</NavLink></li>
-            <li><NavLink>Products</NavLink></li>
-            <li><NavLink>Shop</NavLink></li>
-            <li><NavLink>Contact</NavLink></li>
-          </ul>
-        </div>
-        <div className='mt-20'>
-          <ul className='space-y-3 md:space-y-4'>
-            <li><NavLink>Register</NavLink></li>
-            <li><NavLink>Login</NavLink></li>
-            <li><NavLink>Logout</NavLink></li>
-            <li><NavLink>Cart</NavLink></li>
-          </ul>
-        </div>
-      </div>
-      </div>
-
       {/* footer */}
       
      <Footer/>
