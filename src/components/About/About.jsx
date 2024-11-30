@@ -11,7 +11,7 @@ const Pages = () => {
       <h1>About Us</h1>
     </div>
 
-    <div className='flex flex-col items-center m-8 p-4'>
+    <div className='flex flex-col items-center m-8 mt-20 p-4'>
       <div>
         <h1 className='flex justify-center font-custonFont text-4xl text-customBlue underline'>Why Shop With Us</h1>
       </div>
@@ -36,7 +36,13 @@ const Pages = () => {
       <p className='text-white w-10/12 text-justify'>Discover the best quality products carefully selected to meet your highest expectations, ensuring satisfaction with every purchase you make!</p>
       </cards>
       </div>
-      
+    </div>
+
+    {/* location map */}
+    <div className='relative flex flex-col w-full mb-20 h-96 justify-center'>
+    <h1 className='flex justify-center font-custonFont text-customRed text-4xl m-10'>Our Location</h1>
+    <iframe className='h-full' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28265.880309098193!2d85.3147648!3d27.6791296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19eb1dad6439%3A0xbb1689fdcee3740b!2sLabim%20Mall!5e0!3m2!1sen!2snp!4v1732696708341!5m2!1sen!2snp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
     </div>
 
       <Footer />
