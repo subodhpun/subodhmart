@@ -103,7 +103,7 @@ const Home = () => {
           <h2 className='text-2xl sm:text-4xl lg:text-5xl font-bold font-custonFont text-customRed'>Welcome to</h2>
           <h1 className='text-3xl md:text-5xl lg:text-8xl font-extrabold font-custonFont text-customBlue'>Subodh Mart</h1>
           <button className="mt-8 px-6 py-3 bg-customRed text-white font-bold rounded-lg hover:bg-customBlue text-center text-lg sm:text-base sm:px-4 sm:py-2 md:text-xl md:px-6 md:py-3">
-            <NavLink to='/Products'>Shop Now</NavLink>
+            <NavLink to='/Products' onClick={()=>window.scrollTo({top:0, behavior:'smooth'})}>Shop Now</NavLink>
           </button>
         </div>
       </div>
