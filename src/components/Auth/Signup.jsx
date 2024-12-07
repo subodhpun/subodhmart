@@ -2,7 +2,7 @@ import React from 'react'
 import SignupImage from '../../../public/assets/images/signup.jpg'
 import { NavLink } from 'react-router-dom'
 import { SocialIcon } from 'react-social-icons'
-
+import Footer from '../Footer/Footer'
 const Signup = () => {
   return (
    <>
@@ -32,7 +32,9 @@ const Signup = () => {
         </div>
       </div>
    </form>
-   </div>   </>
+   </div>
+   <Footer/>
+    </>
   )
 }
 

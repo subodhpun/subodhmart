@@ -174,7 +174,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/addCart"
+              to="/Cart"
               className={({ isActive }) =>
                 `${isActive ? "text-customRed" : "text-black"} font-extrabold`
               }
@@ -186,8 +186,8 @@ const Navbar = () => {
             <NavLink
               to="/login"
               className={({ isActive }) =>
-                `${location.pathname === '/login' || location.pathname === '/login/signup' ? "text-customRed" : "text-black"} font-extrabold`
-            }
+                `${isActive ? "text-customRed" : "text-black"} font-extrabold`
+              }
             >
               <i className="fas fa-user text-xl"></i>
             </NavLink>
