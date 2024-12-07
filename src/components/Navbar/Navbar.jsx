@@ -186,8 +186,8 @@ const Navbar = () => {
             <NavLink
               to="/login"
               className={({ isActive }) =>
-                `${isActive ? "text-customRed" : "text-black"} font-extrabold`
-              }
+                `${location.pathname === '/login' || location.pathname === '/login/signup' ? "text-customRed" : "text-black"} font-extrabold`
+            }
             >
               <i className="fas fa-user text-xl"></i>
             </NavLink>

@@ -5,8 +5,8 @@ import Home from '../src/components/Home/Home'
 import About from '../src/components/About/About'
 import Products from '../src/components/Products/Products'
 import Contact from '../src/components/Contact/Contact'
-import Login from '../src/components/Login/Login'
-import Signup from '../src/components/Login/Signup'
+import Login from './components/Auth/Login'
+import Signup from './components/Auth/Signup'
 import Cart from '../src/components/Cart/Cart'
 import CategoryDetails from '../src/components/Catagory/CatagoryDetails'; // Create this component
 const App = () => {
