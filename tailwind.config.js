@@ -12,7 +12,6 @@ module.exports = {
       },
       fontFamily: {
         custonFont: ['"Playfair Display"', 'serif'],
-        logoFont: ['"Emotional Rescue"', 'sans-serif'], 
       },
       fontSize: {
         'heading': '72px', // Add custom size for heading
